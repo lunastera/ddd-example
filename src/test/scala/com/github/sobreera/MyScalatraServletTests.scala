@@ -1,5 +1,6 @@
 package com.github.sobreera
 
+import com.github.sobreera.application.controller.MyScalatraServlet
 import org.scalatra.test.scalatest._
 
 class MyScalatraServletTests extends ScalatraFunSuite {

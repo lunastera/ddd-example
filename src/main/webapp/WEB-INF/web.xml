@@ -5,12 +5,43 @@
   http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
   version="3.1">
 
+  <context-param>
+    <param-name>db.url</param-name>
+    <param-value>jdbc:h2:mem:test</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.user</param-name>
+    <param-value>sa</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.password</param-name>
+    <param-value>sa</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.tcpServer</param-name>
+    <param-value>-tcpAllowOthers</param-value>
+  </context-param>
+  <context-param>
+    <param-name>db.scripts</param-name>
+    <param-value>/seed/init.sql</param-value>
+  </context-param>
+
+  <servlet>
+    <servlet-name>default</servlet-name>
+    <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+    <init-param>
+      <param-name>dirAllowed</param-name>
+      <param-value>false</param-value>
+    </init-param>
+  </servlet>
+
   <!--
     This listener loads a class in the default package called ScalatraBootstrap.
     That class should implement org.scalatra.LifeCycle.  Your app can be
     configured in Scala code there.
   -->
   <listener>
+    <listener-class>com.github.sobreera.config.H2DbStarter</listener-class>
     <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
   </listener>
 </web-app>

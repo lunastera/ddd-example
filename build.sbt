@@ -17,6 +17,7 @@ libraryDependencies ++= Seq(
   "org.eclipse.jetty" % "jetty-webapp" % "9.4.9.v20180320" % "container",
   "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided",
   "org.scalikejdbc" %% "scalikejdbc"       % "3.3.5",
+  "org.scalikejdbc" %% "scalikejdbc-config"  % "3.3.5",
   "com.h2database"  %  "h2"                % "1.4.199"
 )
 

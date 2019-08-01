@@ -1,9 +1,9 @@
-create table members (
-  id serial not null primary key,
-  name varchar(64),
-  created_at timestamp not null
+create table users (
+  id varchar(64) not null primary key,
+  name varchar(255),
+  password varchar(255)
 );
 
-insert into members (name, created_at) values ('Alice', current_timestamp);
-insert into members (name, created_at) values ('Bob', current_timestamp);
-insert into members (name, created_at) values ('Chris', current_timestamp);
+insert into users (id, name, password) values ('uno', 'Ara', 'era');
+insert into users (id, name, password) values ('zenno', 'maeno', 'hoge');
+insert into users (id, name, password) values ('sakapon', 'sakamoto', 'fuga');

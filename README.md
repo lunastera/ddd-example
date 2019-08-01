@@ -1,4 +1,6 @@
-# LectureApp #
+# DDD Example #
+
+Code Share Service
 
 ## Build & Run ##
 

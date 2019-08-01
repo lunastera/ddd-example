@@ -41,7 +41,6 @@
     configured in Scala code there.
   -->
   <listener>
-    <listener-class>com.github.sobreera.config.H2DbStarter</listener-class>
-    <listener-class>org.scalatra.servlet.ScalatraListener</listener-class>
+    <listener-class>ScalatraListener</listener-class>
   </listener>
 </web-app>

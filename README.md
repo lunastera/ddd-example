@@ -5,7 +5,7 @@ Code Share Service
 ## Build & Run ##
 
 ```sh
-$ cd lectureapp
+$ cd ddd-example
 $ sbt
 > jetty:start
 > browse
